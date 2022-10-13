@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Bitter:ital,wght@0,200;0,300;0,400;0,500;1,200;1,300;1,400&family=Saira+Extra+Condensed:wght@400;600&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+ 
+    <section id="section3">
+        <img src="../http/images/code-ga29d91366_1920.jpg">
+        <div class="spacer"></div>
+        <br>
+        <br>
+        <h1>Profundizando</h1>
+        <h4>Los mensajes HTTP son en texto plano, lo que lo hace más legible y fácil de depurar. Sin embargo,
+            esto tiene el inconveniente de hacer los mensajes más largos. Los mensajes tienen la siguiente estructura:
+        </h4>
+        <ul class="uli">
+            <li>
+                Línea inicial (termina con retorno de carro y un salto de línea) con
+            </li>
+            <ul>
+                <li>
+                    Para las peticiones: la acción requerida por el servidor (método de petición) seguido de la URL
+                    del recurso y la versión HTTP que soporta el cliente.
+                </li>
+                <li>
+                    Para respuestas: La versión del HTTP usado seguido del código de respuesta (que indica qué ha
+                    pasado con la petición seguido de la URL del recurso) y de la frase asociada a dicho retorno.
+
+                </li>
+            </ul>
+            <li>
+                Las cabeceras del mensaje que terminan con una línea en blanco. Son metadatos. Estas cabeceras le
+                dan gran flexibilidad al protocolo.
+            </li>
+            <li>
+                Cuerpo del mensaje. Es opcional. Su presencia depende de la línea anterior del mensaje y del tipo de
+                recurso al que hace referencia la URL. Típicamente tiene los datos que se intercambian cliente y
+                servidor. Por ejemplo para una petición podría contener ciertos datos que se quieren enviar al
+                servidor para que los procese. Para una respuesta podría incluir los datos que el cliente ha
+                solicitado.
+            </li>
+        </ul>
+        <h3>Métodos de petición</h3>
+
+        <h4>HTTP define una serie predefinida de métodos de petición (algunas veces referido como "verbos")
+            que pueden utilizarse. El protocolo tiene flexibilidad para ir añadiendo nuevos métodos y para
+            así añadir nuevas funcionalidades. El número de métodos de petición se ha ido aumentando según
+            se avanzaba en las versiones. Esta lista incluye los métodos agregados por WebDAV.</h4>
+        <img src="../http/images/http_request (1).png" class="img3">
+
+        <h4>Cada método indica la acción que desea que se efectúe sobre el recurso identificado. Lo que este
+            recurso representa depende de la aplicación del servidor. Por ejemplo, el recurso puede corresponderse
+            con un archivo que reside en el servidor.</h4>
+        <div class="container3">
+            <div class="metodos">
+                <h3>GET</h3>
+                <p>GET /index.php</p>
+                <details>
+                    <summary>Más info aquí</summary>
+                    <h4>El método GET solicita una representación de un recurso específico. Las peticiones
+                        que usan el método GET sólo deben recuperar datos.</h4>
+                    <br>
+                    <code class="language-https">
+                    
+                        <br>
+                        <p>GET php.net/images/logo.png HTTP/1.1</p>
+                    </code>
+                </details>
+            </div>
+            <div class="metodos">
+                <h3>HEAD</h3>
+                <p>HEAD /index.html</p>
+                <details>
+                    <summary>Más info aquí</summary>
+                <h4>Pide una respuesta idéntica a la que correspondería a una petición GET, pero en la
+                    respuesta no se devuelve el cuerpo. Esto es útil para poder recuperar los metadatos de los
+                    encabezados de respuesta,
+                    sin tener que transportar todo el contenido.</h4>
+                <br>
+                <code class="language-https">
+                        
+                        <br>
+                        <p>GET php.net/images/logo.png HTTP/1.1</p>
+                    </code>
+                </details>
+            </div>
+            <div class="metodos">
+                <h3>POST</h3>
+                <p>POST /test</p>
+                <details>
+                    <summary>Más info aquí</summary>
+                <h4>Envía datos para que sean procesados por el recurso identificado en la URL de la línea petición.
+                    Los datos se incluirán en el cuerpo de la petición. A nivel semántico está orientado a crear un
+                    nuevo recurso, cuya naturaleza
+                    vendrá especificada por la cabecera Content-Type. Ejemplos:</h4>
+
+                <h4>Para datos formularios codificados como una URL (aunque viajan en el cuerpo de la petición, no
+                    en la URL):</h4>
+                <br>
+                <code class="language-https">
+                        <p>application/x-www-form-urlencoded</p>
+                        <br>
+                    </code>
+                <h4>Para bloques a subir, ej. ficheros: </h4>
+                <br>
+                <code class="language-https">
+                        <p>multipart/form-data</p>
+                        <br>
+                    </code>
+                <h4>Además de los anteriores, no hay un estándar obligatorio y también podría ser otros como
+                    text/plain, application/json, application/octet-stream,...</h4>
+
+                <br>
+                <code class="language-https">
+                        <p>POST /echo/post/json HTTP/1.1</p>
+                           <p> Host: reqbin.com</p>
+                           <p> Accept: application/json</p>
+                           <p> Content-Type: application/json</p>
+                           <p> Content-Length: 81</p>
+                                  
+                           <p>  {</p>
+                            <p>    "Id": 78912,</p>
+                            <p>    "Customer": "Jason Sweet",</p>
+                            <p>    "Quantity": 1,</p>
+                            <p>    "Price": 18.00</p>
+                            <p>   }</p>
+                        <br>
+                    </code>
+                </details>
+            </div>
+            <div class="metodos">
+                <h3>PUT</h3>
+                <p>PUT /new.html HTTP/1.1</p>
+                <details>
+                    <summary>Más info aquí</summary>
+                <h4>Envía datos al servidor,
+                    pero a diferencia del método POST la URI de la línea de petición
+                    no hace referencia al recurso que los procesará, sino que identifica
+                    al los propios datos. Otra diferencia
+                    con POST es semántica: mientras que POST está orientado a
+                    la creación de nuevos contenidos, PUT está más orientado a la actualización
+                    de los mismos (aunque también podría crearlos).
+                    Ejemplo:</h4>
+                <br>
+                <code class="language-https">
+                        <p>PUT /nuevo.html HTTP/1.1
+                            <p>Host: ejemplo.com</p>
+                            <p>Content-type: text/html</p>
+                            <p>Content-length: 16</p>
+                            <p>Nuevo Archivo</p>
+                        <br>
+                    </code>
+                </details>
+            </div>
+            <div class="metodos">
+                <h3>DELETE</h3>
+                <p>DELETE /file.html HTTP/1.1
+                </p>
+                <details>
+                    <summary>Más info aquí</summary>
+                <h4>Borra el recurso especificado.</h4>
+                <br>
+                <code class="language-https">
+                        <p>DELETE /file.html HTTP/1.1</p>
+                         <p>Host: example.com</p>
+                        <br>
+                    </code>
+                    </details>
+            </div>
+            <div class="metodos">
+                <h3>TRACE</h3>
+                <p>TRACE /index.html</p>
+                <details>
+                    <summary>Más info aquí</summary>
+                <h4>El método HTTP TRACE efectúa una prueba de bucle de mensaje por el camino al recurso objetivo proporcionando un útil mecanismo de debugging.</h4>
+                <h4>El destino final de la petición debería devolver el mensaje recibido, excluyendo algunos de los campos descritos abajo, de vuelta al cliente como el mensaje body y una respuesta 200 (OK) con un Content-Type de message/http. El destinatario final es o el servidor de origen o el primer servidor en recibir un Max-Forwards (en-US) de valor 0 en la petición.</h4>
+                <br>
+                    </details>
+            </div>
+            <div class="metodos">
+                <h3>OPTIONS</h3>
+                <p>OPTIONS /index.html HTTP/1.1</p>
+                <details>
+                    <summary>Más info aquí</summary>
+                <h4>Devuelve los métodos HTTP que el servidor soporta para un URL específico. Esto puede ser utilizado para comprobar la funcionalidad de un servidor web mediante petición en lugar de un recurso específico.</h4>
+                <br>
+                <code class="language-https">
+                        <p>curl -X OPTIONS https://example.org -i</p>
+                        <br>
+                    </code>
+                </details>
+            </div>
+            <div class="metodos">
+                <h3>CONNECT</h3>
+                <p>CONNECT www.example.com:443 HTTP/1.1
+                </p>
+                <details>
+                    <summary>Más info aquí</summary>
+                <h4>El método CONNECT establece un túnel hacia el servidor identificado por el recurso.</h4>
+                <h4>El método **HTTP CONNECT **inicia la comunicación en dos caminos con la fuente del recurso solicitado. Puede ser usado para abrir una comunicación tunel.</h4>
+                <h4>Por ejemplo, el método CONNECT puede ser usado para acceder a sitios web que usan SSL (en-US) (HTTPS). El cliente realiza la petición al Servidor Proxy HTTP para establecer una conexión tunel hacia un destino deseado. Entonces el servidor Proxy procede a realizar la conexión en nombre del cliente, una vez establecida la conexión con el servidor deseado, el servidor Proxy envía los datos desde y hacia el cliente.</h4>
+                <br>
+                <code class="language-https">
+                        <p>CONNECT server.example.com:80 HTTP/1.1</p>
+                        <p>Host: server.example.com:80</p>
+                        <p>Proxy-Authorization: basic aGVsbG86d29ybGQ=</p>
+                        <br>
+                    </code>
+                </details>
+            </div>
+            <div class="metodos">
+                <h3>PATCH</h3>
+                <p>PATCH /file.txt HTTP/1.1
+                </p>
+                <details>
+                    <summary>Más info aquí</summary>
+                <h4>El método HTTP PATCH aplica modificaciones parciales a un recurso.</h4>
+                <h4>El método HTTP PUT únicamente permite reemplazar completamente un documento. A diferencia de PUT, el método PATCH no es idempotente, esto quiere decir que peticiones identicas sucesivas pueden tener efectos diferentes. Sin embargo, es posible emitir peticiones PATCH de tal forma que sean idempotentes.</h4>
+                <br>
+                <code class="language-https">
+                        <p>PATCH /file.txt HTTP/1.1</p>
+                        <p>Host: www.example.com</p>
+                        <p>Content-Type: application/example</p>
+                        <p>If-Match: "e0023aa4e"</p>
+                        <p>Content-Length: 100</p>  
+                        <p>[description of changes]</p>
+                        <br>
+                    </code>
+                </details>
+            </div>
+        </div>
+
+
+    </section>
+    <script src="script.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Bitter:ital,wght@0,200;0,300;0,400;0,500;1,200;1,300;1,400&family=Saira+Extra+Condensed:wght@400;600&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <section id="section3">
+        <img src="../http/images/2000px-AJAX_logo_by_gengns.svg_ (1).webp">
+        <div class="spacer"></div>
+        <br>
+        <br>
+        <h1>Y todo esto.. ¿Para qué?</h1>
+        <h4>Una petición HTTP es como suele denominarse a la acción por parte del navegador de
+            solicitar a un servidor web un documento o archivo, ya sea un fichero .html, una imagen,
+            una tipografía, un archivo .js, etc. Gracias a dicha petición, el navegador puede descargar
+            ese archivo, almacenarlo en un caché temporal de archivos del navegador y, finalmente,
+            mostrarlo en la página actual que lo ha solicitado.</h4>
+        <h3>Peticiones HTTP mediante AJAX</h3>
+        <h4>Con el tiempo, aparece una nueva modalidad de realizar peticiones, denominada AJAX
+            (Asynchronous Javascript and XML). Esta modalidad se basa en que la petición HTTP se realiza
+            desde Javascript, de forma transparente al usuario, descargando la información y pudiendo
+            tratarla sin necesidad de mostrarla directamente en la página.</h4>
+        <h4>Esto produce un interesante cambio en el panorama que había entonces, puesto que podemos hacer
+            actualizaciones de contenidos de forma parcial, de modo que se actualice una página «en vivo»,
+            sin necesidad de recargar toda la página, sino solamente actualizado una pequeña parte de ella,
+            pudiendo utilizar Javascript para crear todo tipo de lógica de apoyo.</h4>
+        <h4>Originalmente, a este sistema de realización de peticiones HTTP se le llamó AJAX, donde la
+            X significa XML, el formato ligero de datos que más se utilizaba en aquel entonces. Actualmente,
+            sobre todo en el mundo Javascript, se utiliza más el formato JSON, aunque por razones fonéticas
+            evidentes (y probablemente evitar confundirlo con una risa) se sigue manteniendo el término AJAX.</h4>
+        <h3>Métodos de petición AJAX </h3>
+        <h4>Existen varias formas de realizar peticiones HTTP mediante AJAX, pero las principales suelen
+            ser XMLHttpRequest y fetch (nativas, incluidas en el navegador por defecto), además de liberías
+            como axios o superagent:</h4>
+        <table>
+            <thead>
+                <tr>
+                    <th>Método</th>
+                    <th>Descripción</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr class="par">
+                    <td><code>XMLHttpRequest</code> (nativo)</td>
+                    <td>Se suele abreviar como <code>XHR</code>. El más antiguo, y también el más verbose. Nativo.</td>
+                </tr>
+                <tr class="impar">
+                    <td><code>fetch</code> (nativo)</td>
+                    <td>Nuevo sistema nativo de peticiones basado en promesas.</td>
+                </tr>
+                <tr class="par">
+                    <td><a href="https://github.com/axios/axios">Axios</a></td>
+                    <td>Librería basada en promesas para realizar peticiones en Node o en navegadores.</td>
+                </tr>
+                <tr class="impar">
+                    <td><a href="https://github.com/visionmedia/superagent">superagent</a></td>
+                    <td>Librería para realizar peticiones HTTP tanto en Node como en navegadores.</td>
+                </tr>
+                <tr class="par">
+                    <td><a href="https://github.com/niftylettuce/frisbee">frisbee</a></td>
+                    <td>Librería basada en fetch. Suele usarse junto a React Native.</td>
+                </tr>
+            </tbody>
+        </table>
+            <h4>Este sistema es el que se observa en páginas en las que vamos navegando mediante enlaces,
+                y al hacer click en ellos, se recarga la página completa. Generalmente, es el que se utiliza
+                frecuentemente en sitios web más tradicionales, los que usan mayoritariamente backend.</h4>
+            <h3>SPA: Single Page Application</h3>
+            <h4>En el lado opuesto se encuentran las páginas de tipo SPA (Single Page Application). Se trata
+                de un enfoque más moderno, donde el navegador se descarga una versión mínima de .html junto a
+                un .js que se encargará de controlar toda la web. Realizará peticiones de los archivos relacionados
+                junto a peticiones a archivos .json o .js con más información o nuevos contenidos, que mostrará en el
+                navegador parcial o completamente, pero sin la necesidad obligatoria de recargar la página
+                completamente.
+                Este sistema se utiliza mayoritariamente para construir aplicaciones web como dashboards o sitios de
+                gestión
+                en los que no necesitamos «navegar» a través de una serie de páginas. Por ejemplo, páginas como WhatsApp
+                Web, Twitter o Google Drive podrían ser ejemplos de SPA.</h4>
+<br>
+<br>
+<br>
+<br>
+    </section>
+    <script src="script.js"></script>
+
+</body>
+
+</html>

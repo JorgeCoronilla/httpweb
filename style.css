@@ -1,0 +1,253 @@
+body {
+    margin: 0;
+    padding:0;
+}
+ul {
+ list-style-position: none;
+}
+h1 {
+    font-family: 'Saira Extra Condensed', sans-serif;
+    text-align: center;
+    margin-bottom: 20px;
+    font-size: 45px;
+    color: #DD5353
+}
+
+h3{
+    font-family: 'Saira Extra Condensed', sans-serif;
+    text-align: center;
+    margin-bottom: 20px;
+    font-size: 25px; 
+    color: #DD5353
+}
+h4 {
+    margin: 10px 20% 10px 20%;
+    font-weight: 500;
+    font-size: 17px;
+    line-height: 1.6;
+    text-align: center;
+    word-spacing: 4px;
+    font-family: 'Bitter', serif;
+}
+
+.uli {
+    font-weight: 500;
+    font-size: 17px;
+    line-height: 1.6;
+    word-spacing: 4px;
+    font-family: 'Bitter', serif;
+    text-align: left;
+    margin: 10px 20% 10px 20%;}
+
+h5 {
+    display:inline;
+    margin: 0;
+    padding: 5px;
+    text-align: center;
+    font-weight: 400;
+    font-size: 15px;
+    color: white;
+    background-color: #DD5353;
+    border-radius: 5px;
+    width: fit-content;
+    font-family: 'Bitter', serif;
+}
+
+.img1 {
+    display: flex;
+    flex-direction: row;
+    align-content:space-around;
+}
+
+.img2 {
+    display: flex;
+    flex-direction:column;
+    margin: 15px 30px 0 30px;
+}
+
+.img3 {
+    border-radius: 15px 15px 15px 15px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 50%;
+}
+.icon {
+    width: 150px;
+    height:150px;
+}
+
+.arrow {
+    width: 180px;
+    height:50px;
+
+}
+
+
+.container{
+    
+    margin: 50px auto 30px auto;
+    background-color: #f4f4f2;
+    border-radius: 15px;
+    padding:50px;
+    align-content: center;
+    width: fit-content;
+}
+
+.container4{
+    margin: 50px auto 30px auto;
+    background-color: #f4f4f2;
+    border-radius: 15px;
+    padding:50px;
+    align-content: center;
+    width: fit-content;
+    display:flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+.container3{
+    margin: 50px auto 30px auto;
+    background-color: #deeaf7;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.container2{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.text {
+    text-align: center;
+}
+
+#section1 {
+    background-color: #deeaf7;
+    align-items: center;
+    position: fixed;
+    z-index: -1;
+    height: 800px;
+}
+
+span{
+    background-color: #DD5353;
+    border-radius: 5px;
+    padding: 2px;
+    color: #f4f4f2;
+    font-weight: 400;
+    letter-spacing: 1.5px;
+}
+p{
+    text-align: center;
+    font-family: 'Bitter', serif;
+}
+
+a {
+    color: gray;
+    font-family: 'Bitter', serif;
+}
+
+#section2 {
+    background-color: #ffffff;
+    position: relative;
+    top:800px;
+}
+
+#section2 h4 {
+    text-align: left;
+}
+#section2 h1 {
+    padding-top:40px;
+    color: white;
+}
+
+#section3 {
+    background-color: #deeaf7;
+    text-align: left;
+    
+}
+#section3 h4 {
+    text-align: left;
+}
+
+code p, h3+p {
+    align-content: center;
+    font-family: Consolas,"courier new";
+  color: rgb(255, 255, 255);
+  background-color: #424242;
+  padding: 10px 10px 10px 10px;
+  font-size: 110%;
+  margin: 0 20% 0 20%;
+  border-radius: 5px;
+  border: 3px solid rgb(116, 116, 116);
+}
+.metodos {
+    background-color: #ffffff;
+    width: 500px;
+    margin: 20px;
+    padding: 10px;
+    text-align: center;
+    border-radius: 15px;
+    border:3px solid #DD5353;
+}
+.metodos h4 {
+    margin:25px;
+    
+}
+.spacer {
+   background-color: #DD5353;
+   height: 5px;
+}
+img {
+    width: 100%;
+    max-height: 400px;
+    
+}
+table{
+margin: 40px 20% 45px 20%;
+font-weight: 500;
+font-size: 15px;
+line-height: 1.6;
+text-align: center;
+word-spacing: 4px;
+font-family: 'Bitter', serif;
+border-collapse:collapse;
+border:rgb(116, 116, 116), 2px solid;
+}
+
+th {
+    background-color: #cbd8e6;
+}
+
+.par {
+    background-color: #eff2f6; 
+}
+.impar {
+    background-color: #e4ebf3;
+}
+
+.small {
+    width: 200px;
+    margin-left: 20px;
+    margin-right: 20px;
+}
+
+#navbar {
+    position: fixed;
+    z-index: 2;
+    background-color: #DD5353;
+    height: 50px;
+    width: 100%;
+    text-align: right;
+    margin-right: 30px;
+}
+
+.bar {
+    color: white;
+    font-family: 'Saira Extra Condensed', sans-serif;
+    font-size: 30px;
+    padding: 0 20px 10px 20px;    
+}
